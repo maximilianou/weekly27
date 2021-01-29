@@ -8,10 +8,15 @@ To apply in:
 - Automation Tool or
 - Command Line Tool
 - My I have to use Command Pattern and Interpreter Pattern Mixed with Middleware Pattern. 
-Simils:
+
+Seems:
+
 *Like the old Filters in java web*
+
 *But widely spread over platforms*
+
 *Like the old Template in C++ .. <T> ..*
+
 
 #### Reference:
 - https://dev.to/lcanady/make-a-typescript-middleware-engine-21kb
@@ -90,6 +95,21 @@ export function pipeline<T>(...middlewares: Middleware<T>[])
   return { use, execute };
 }
 ```
+
+- Makefile
+```
+api:
+	mkdir api && cd api && npm -y init
+	cd api && npm i express-openapi-validator	
+	cd api && npm i @types/node typescript 
+	cd api && npm install ts-node -D
+	cd api &&  ./node_modules/.bin/tsc --init --rootDir src --outDir ./build --esModuleInterop --lib esnext --module esnext --noImplicitAny true
+	cd api && mkdir src
+	cd api && echo "console.log('Running.. TypeScript app')" > src/app.ts
+	cd api && ./node_modules/.bin/tsc
+	cd api && node ./build/app.js
+```
+
 
 - package.json
 ```json
