@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "build":"./node_modules/.bin/tsc ",
+    "start":"node ./build/app.js",
+    "dev":  "./node_modules/.bin/ts-node ./src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.22",
+    "express-openapi-validator": "^4.10.9",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1"
+  }
+}
